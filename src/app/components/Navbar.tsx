@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+
 const Navbar = ()=>{
   // const routes = [
   //   {
@@ -16,11 +17,15 @@ const Navbar = ()=>{
   return(
 
     <div>
-      <div className="flex flex-row-reverse m-6">
+      <div className="flex flex-row-reverse m-6 items-center">
+        
         <button className="pl-6 pr-6 pt-3 pb-3 rounded-lg bg-cyan-400 shadow-md hover:bg-cyan-500">Contact Me!</button>
+        <ul>
+          <li className="mr-6"><Link href="#projects">Projects</Link></li>
+        </ul>
       </div>
     </div>
-    
+
     // <nav className="" role="navigation" aria-label="main navigation">
     //   <div className="flex">
     //     <Link className="text-xl" href={'/'}> <span className="">Sergio Rodrigo </span></Link>
