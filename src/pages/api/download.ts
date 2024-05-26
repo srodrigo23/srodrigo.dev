@@ -17,17 +17,16 @@ export default (req:any, res:any) => {
     }
 
     // Define a mapping of file extensions to content types
-    const contentTypeMap = {
-        svg: "image/svg+xml",
-        ico: "image/x-icon",
-        png: "image/png",
-        jpg: "image/jpeg",
-        pdf: "application/pdf",
-        // Add more mappings as needed for other file types
+    const contentTypeMap:any= {
+        'svg': "image/svg+xml",
+        'ico': "image/x-icon",
+        'png': "image/png",
+        'jpg': "image/jpeg",
+        'pdf': "application/pdf",
     };
 
     // Get the file extension
-    const fileExtension = fileName.split(".").pop().toLowerCase();
+    const fileExtension :string = fileName?.split(".")?.pop()?.toLowerCase() || 'pdf';
 
     // Determine the content type based on the file extension
     const contentType = contentTypeMap[fileExtension] || "application/octet-stream";
