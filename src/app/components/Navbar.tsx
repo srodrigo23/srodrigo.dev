@@ -14,12 +14,13 @@ const Navbar = ()=>{
   //     route:'/involvementes'
   //   }
   // ];
+  const mail = 'rodrigosergio93@gmail.com'
   return(
 
     <div>
       <div className="flex flex-row-reverse m-6 items-center">
         
-        <button className="pl-6 pr-6 pt-3 pb-3 rounded-lg bg-cyan-400 shadow-md hover:bg-cyan-500">Contact Me!</button>
+        <a className="pl-6 pr-6 pt-3 pb-3 rounded-lg bg-cyan-400 shadow-md hover:bg-cyan-500" href={`mailto:${mail}`}>Contact Me!</a>
         <ul>
           <li className="mr-6"><Link href="#projects">Projects</Link></li>
         </ul>
