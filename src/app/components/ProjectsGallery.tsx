@@ -31,20 +31,23 @@ const ProjectsGallery = () => {
     }
   ]
 
-
-  return(<div>
-    {
-      projects.map((project)=>( 
-        <CardProject
-          key={project.id}
-          title={project.title}
-          shortDescription={project.shortDescription}
-          largeDescription={project.largeDescription}
-          techstack={project.techStack}
-          repolink={project.repoLink}
-        />))
-    }
-  </div>)
+  return(
+    <div className="h-screen flex justify-center align-middle p-6">
+      <div className={`grid grid-cols-${ projects.length === 2?'3':'3'} grid-rows-2 gap-4 w-4/5`}>
+        {
+          projects.map((project)=>( 
+            <CardProject
+              key={project.id}
+              title={project.title}
+              shortDescription={project.shortDescription}
+              largeDescription={project.largeDescription}
+              techstack={project.techStack}
+              repolink={project.repoLink}
+            />))
+        }
+      </div>
+    </div>
+  )
 }
 
 export default ProjectsGallery;

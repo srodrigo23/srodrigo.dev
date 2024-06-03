@@ -10,7 +10,7 @@ interface ProjectData{
 
 const CardProject = (props:ProjectData) => {
   return(
-    <div>
+    <div className="shadow-md p-4 hover:shadow-lg rounded-md">
       <span>{props.title}</span>
 
       <div>{props.shortDescription}</div>
