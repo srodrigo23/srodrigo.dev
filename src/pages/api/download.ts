@@ -6,7 +6,7 @@ const path = require("path");
 
 export default (req:any, res:any) => {
     // Filename for the downloaded file
-    const fileName = "cv-sergio_cardenas.pdf";
+    const fileName = "cv-sergiorodrigo.pdf";
     const filePath = path.join(process.cwd(), "public", fileName); // Path to your file
     
 
