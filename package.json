@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@slidev/cli": "^0.49.10",
+    "@slidev/theme-default": "^0.25.0",
+    "@slidev/theme-seriph": "^0.25.0",
     "axios": "^1.7.2",
     "next": "14.1.3",
     "react": "^18",
