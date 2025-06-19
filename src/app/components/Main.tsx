@@ -77,11 +77,13 @@ const Main = () =>{
       <div className="h-screen flex justify-center items-center">
 
         <motion.div 
-          className="flex flex-col md:flex-row justify-center items-center bg-gray-700 p-10 rounded-lg shadow-lg hover:bg-black hover:transition-shadow duration-300"
+          className="flex flex-col md:flex-row justify-center items-center p-10 rounded-lg shadow-lg hover:bg-black hover:transition-shadow duration-300"
           
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
+
+          
         >
           <div className="w-2/5 mb-4 md:mr-5 lg:mb-5 justify-center items-center">
             <Image 
@@ -97,13 +99,19 @@ const Main = () =>{
               {/* <p className="text-3xl">{secondName}</p> */}
               <p className="text-2xl md:text-5xl">{lastName}</p>
 
-              <div>
+              <div className="text-lg md:text-2xl text-gray-400 mt-2"
+            
+              >
                 <ul className="flex text-white mt-5">
                   {
                     socialNetworks.map((sn, i)=>(
-                      <li key={i} className="p-2 hover:shadow-lg">
+                      <motion.div key={i} className="p-2 hover:shadow-lg"
+                        whileHover={{ scale: 1.2 }}
+                        whileTap={{ scale: 1.2 }}
+                      >
+
                         <Link href={sn.link} target="_blank">{sn.icon}</Link>
-                      </li>))
+                      </motion.div>))
                   }
                 </ul>
             </div>
