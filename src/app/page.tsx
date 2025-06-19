@@ -10,10 +10,10 @@ import ProjectsGallery from "./components/ProjectsGallery";
 export default function Home() {
   return (
     <>
-      <Navbar/>
+      {/* <Navbar/> */}
       <Main/>
-      <ProjectsGallery/>
-      <Footer/>
+      {/* <ProjectsGallery/> */}
+      {/* <Footer/> */}
     </>
   );
 }
