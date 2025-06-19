@@ -6,6 +6,8 @@ import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import informal from "../images/informal.jpg"
 
+
+import *  as motion from "motion/react-client"
 import { useState } from "react";
 
 const firstName = "Sergio Rodrigo"
@@ -74,7 +76,13 @@ const Main = () =>{
     <>
       <div className="h-screen flex justify-center items-center">
 
-        <div className="flex flex-col md:flex-row justify-center items-center bg-gray-800 p-10 rounded-lg shadow-lg hover:bg-black hover:transition-shadow duration-300">
+        <motion.div 
+          className="flex flex-col md:flex-row justify-center items-center bg-gray-700 p-10 rounded-lg shadow-lg hover:bg-black hover:transition-shadow duration-300"
+          
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <div className="w-2/5 mb-4 md:mr-5 lg:mb-5 justify-center items-center">
             <Image 
               src={informal}
@@ -112,7 +120,7 @@ const Main = () =>{
               onClick={downloadCV}
             > <DownloadIcon/>  Download CV</button> */}
           {/* </div>  */}
-        </div>
+        </motion.div>
       </div>
     </>
   )
