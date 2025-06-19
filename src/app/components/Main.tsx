@@ -84,7 +84,7 @@ const Main = () =>{
             />
           </div>
           <div className="w-3/5">
-            <div className=" text-white text-center md:text-left">
+            <div className="font-bold text-white text-center md:text-left">
               <p className="text-4xl md:text-6xl">{firstName}</p>
               {/* <p className="text-3xl">{secondName}</p> */}
               <p className="text-2xl md:text-5xl">{lastName}</p>
